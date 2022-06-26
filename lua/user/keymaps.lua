@@ -75,9 +75,11 @@ keymap("x", "<leader>/", '<ESC><CMD>lua require("Comment.api").toggle_linewise_o
 
 -- Toggle term
 --keymap("n", "<leader>tt", ":ToggleTerm size=40 dir=~/Desktop direction=horizontal<CR>", opts)
---keymap("t", "<leader>tt", ":ToggleTerm size=40 dir=~/Desktop direction=horizontal<CR>", opts) keymap("t", '<leader>tt", "<Cmd>exe v:count1 . ' .. 'ToggleTerm<CR>' , opts)
 keymap("n", "<leader>tt", ":ToggleTerm<Enter>", opts)
 keymap("t", "<leader>tt", "<Cmd>exe v:count1 . " .. "\"" .."ToggleTerm".. "\"" .. "<CR>", opts)
+keymap("v", "<leader>lt", ":ToggleTermSendVisualLines<Enter>", opts)
+keymap("v", "<leader>vt", ":ToggleTermSendVisualSelection<Enter>", opts)
+
 
 
 

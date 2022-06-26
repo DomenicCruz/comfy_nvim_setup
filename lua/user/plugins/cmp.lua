@@ -14,7 +14,6 @@ luasnip.filetype_extend("javascript", { "javascriptreact", "html" }) --  using a
 luasnip.filetype_extend("javascriptreact", { "html" }) -- using all html snippets in jsx
 
 
-
 local check_backspace = function()
 	local col = vim.fn.col(".") - 1
 	return col == 0 or vim.fn.getline("."):sub(col, col):match("%s")

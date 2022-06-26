@@ -15,6 +15,7 @@ local servers = {
   "bashls",
   "jsonls",
   "yamlls",
+  "hls",
 }
 
 local lsp_installer_opts = {
@@ -53,6 +54,11 @@ for _, server in pairs(servers) do
   if server == "pyright" then
     local pyright_opts = require "user.lsp.settings.pyright"
     opts = vim.tbl_deep_extend("force", pyright_opts, opts)
+  end
+
+  if server == "hls" then
+    local hls_opts = require "user.lsp.settings.hls"
+    opts = vim.tbl_deep_extend("force", hls_opts, opts)
   end
 
   lspconfig[server].setup(opts)

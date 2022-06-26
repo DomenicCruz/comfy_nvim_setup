@@ -3,8 +3,7 @@ if not transparent_status_ok then
   return
 end
 
-
-require("transparent").setup({
+transparent.setup({
   enable = true, -- boolean: enable transparent
   extra_groups = { -- table/string: additional groups that should be cleared
     -- In particular, when you set it to 'all', that means all available groups
